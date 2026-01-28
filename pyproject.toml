@@ -1,0 +1,66 @@
+[tool.poetry]
+name = "safety-vision-ai"
+version = "1.0.0"
+description = "Sistema de monitoreo de seguridad industrial con visión por computadora para detectar EPP en tiempo real"
+authors = ["Tu Nombre <tu@email.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+ultralytics = "^8.0.0"
+opencv-python-headless = "^4.8.0"
+fastapi = "^0.104.0"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+sqlalchemy = "^2.0.0"
+psycopg2-binary = "^2.9.9"
+python-dotenv = "^1.0.0"
+pydantic-settings = "^2.0.0"
+numpy = "^1.24.0"
+pandas = "^2.0.0"
+pillow = "^10.0.0"
+onnxruntime = "^1.16.0"
+python-multipart = "^0.0.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.0"
+black = "^23.10.0"
+isort = "^5.12.0"
+flake8 = "^6.1.0"
+mypy = "^1.6.0"
+pre-commit = "^3.5.0"
+jupyter = "^1.0.0"
+ipykernel = "^6.26.0"
+matplotlib = "^3.8.0"
+seaborn = "^0.13.0"
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | __pycache__
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip = [".venv", "build", "dist"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = "-v --tb=short"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

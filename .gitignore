@@ -1,0 +1,86 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv
+
+# Poetry
+poetry.lock
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+
+# Datasets (demasiado grandes para Git)
+datasets/*/
+!datasets/.gitkeep
+
+# Modelos entrenados (usar Git LFS si es necesario)
+models_assets/*.pt
+models_assets/*.onnx
+models_assets/*.engine
+!models_assets/.gitkeep
+
+# Outputs
+outputs/alerts/*.jpg
+outputs/alerts/*.png
+outputs/logs/*.log
+!outputs/alerts/.gitkeep
+!outputs/logs/.gitkeep
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# Temporary files
+*.tmp
+*.temp
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# YOLOv8 runs
+runs/
