@@ -47,6 +47,7 @@ poetry.lock
 # Datasets (demasiado grandes para Git)
 datasets/*/
 !datasets/.gitkeep
+*.zip
 
 # Modelos entrenados (usar Git LFS si es necesario)
 models_assets/*.pt
