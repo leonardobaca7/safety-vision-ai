@@ -49,8 +49,8 @@ datasets/*/
 !datasets/.gitkeep
 *.zip
 
-# Modelos entrenados (usar Git LFS si es necesario)
-models_assets/*.pt
+# Modelos entrenados grandes (usar Git LFS si es necesario)
+# models_assets/*.pt
 models_assets/*.onnx
 models_assets/*.engine
 !models_assets/.gitkeep
